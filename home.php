@@ -1,42 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Programming @JIIT</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<link rel="icon" href="assets/logo.png" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="css/mystyle.CSS">
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Programing @JIIT</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="notices.php">NOTICES</a></li>
-        <li><a href="sm.php">SM</a></li>
-        <li><a href="schedule.php">SCHEDULE</a></li>
-		<li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php
 
-<div class="jumbotron text-center">
+echo '<div class="jumbotron text-center">
   <p>Get Notified via Mail</p> 
   <form class="form-inline">
     <input type="email" class="form-control" size="50" placeholder="Email Address" required>
@@ -122,7 +87,7 @@
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p>Contact us and we will get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>Jaypee Institute of Information Technology<br>
 															Sector-128, Jaypee Wish Town Village, Sultanpur, Noida-201 304, Uttar Pradesh, India.</p>
       <!--p><span class="glyphicon glyphicon-phone"></span></p-->
@@ -172,15 +137,7 @@ var marker = new google.maps.Marker({
 marker.setMap(map);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, "load", initialize);
 </script>
-
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p align="right" style="text-align:right">Developer<a href="" title="Developer">JIIT Programming HUB</a></p>		
-</footer>
- <script src="js/js.js"></script>
-</body>
-</html>
+';
+?>
