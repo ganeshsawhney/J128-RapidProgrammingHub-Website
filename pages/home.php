@@ -24,7 +24,7 @@
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-education logo"></span>
+      <img class="img-thumbnail img-responsive" alt="J128 Programming Hub"  src="assets/pics/j128proghub.png" style="max-height: 100%;max-width: 100%;">
     </div>
   </div>
 </div>
