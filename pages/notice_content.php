@@ -85,7 +85,7 @@ $row['type'] . '</td><td align="left">' .
 $row['dateofevent'] . '</td><td align="left">' . 
 $row['by'] . '</td><td>';
 ?>
-        <button class="button">Click to Read</button>
+        <a target="_blank" href="../uploads/<?php echo $row['id'];?>.txt" class="button">Click to Read</button>
 <?php
 
 echo '
