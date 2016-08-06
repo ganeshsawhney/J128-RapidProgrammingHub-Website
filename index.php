@@ -93,14 +93,43 @@ $(function() {
 <div class="container-fluid">
   <div class="row">
 <div id="demo">
+<script>
+$(document).ready(function(){
+$("#submit").click(function(){
+var email = $("#email").val();
+// Returns successful data submission message when the entered information is stored in database.
+var dataString = '&email1='+ email;
+if(email=='')
+{
+alert("Please Fill All Fields");
+}
+else
+{
+// AJAX Code To Submit Form.
+$.ajax({
+type: "POST",
+url: "pages/emailfeed.php",
+data: dataString,
+cache: false,
+success: function(result){
+ $('#demoajax').html(result);
+}
+});
+}
+return false;
+});
+});
 
+</script>
 
 <div class="jumbotron text-center">
+<div id="demoajax">
   <p>Get Notified via Mail</p> 
-  <form class="form-inline">
-    <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-    <button type="submit" onClick="alert('This Feature will be active within few days\nApologies for the inconvenience')" class="btn btn-danger">Subscribe</button>
+  <form class="form-inline" >
+	<input id="email" type="text" class="form-control" size="50" placeholder="Email Address" required>
+	<input id="submit" type="submit" value="Submit" class="btn btn-danger">
   </form>
+  </div>
 </div>
 
 <!-- Container (About Section) -->
