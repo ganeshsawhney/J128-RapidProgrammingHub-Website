@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION["logincheck"]))
+		{
+		header('Location: index.php');
+		}
+		
+		
+$tag="";
+if (isset($_GET['tag']))
+	$tag=$_GET['tag'];	
+?>
+
 <html lang="en">
 <head>
 	<title>Programming @JIIT</title>
@@ -16,6 +29,12 @@
 
 
 <script type="text/javascript">
+
+function logout() { 
+        window.location.href = "?tag=logout";  // Change This
+}
+
+
 function loadDoc(str) {
 $("#demo").animate({
 		marginLeft: '400px',
@@ -34,29 +53,6 @@ $("#demo").animate({
     });
 }
 
-
-
-
-
-$(function() {
-  $('#hovering').hover(function() {
-    $('#b').css({"height": "200px", "width": "500px" });
-  }, function() {
-    // on mouseout, reset the background colour
-
-    $('#b').css({ "height": "0", "width": "0"});
-  });
-});
-
-$(function() {
-  $('#b').hover(function() {
-    $('#b').css({"height": "200px", "width": "500px" });
-  }, function() {
-    // on mouseout, reset the background colour
-
-    $('#b').css({ "height": "0", "width": "0"});
-  });
-});
 </script>
 	
 	
@@ -78,18 +74,29 @@ $(function() {
       <ul class="nav navbar-nav navbar-right">
         <li><a onclick="loadDoc('pages/home.php');" href="#HOME">HOME</a></li>
         <li ><a onclick="loadDoc('pages/notice.php');" href="#NOTICES">NOTICES</a></li>
+        <li><a onclick="loadDoc('pages/notice.php');" href="#SCHEDULE">SCHEDULE</a></li>
         <li><a onclick="loadDoc('pages/contact.php');" href="#CONTACT">CONTACT</a></li>
-        <li><a id="hovering" href="#ADMINLOGIN">AdminLogin</a></li>
+        <li><a onclick="loadDoc('pages/addnotice.php');" href="#ADDNOTICE">ADDNOTICE</a></li>
+		<?php if($_SESSION["type"]=="Faculty"){?>
+        <li><a onclick="loadDoc('pages/addcoordinators.php');" href="#Coordinators">ADD CO.</a></li>
+		<?php }?>
+        <li><a onclick="logout();"href="?tag=logout">SIGNOUT</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<nav class="navbar-fixed-top">
-<div class="container">
-  <div class="row">
-<iframe id="b" style="height: 0;width: 0;" frameBorder="0" align="right" src="pages/login.php"></iframe>
-</div></div>
-</nav>
+
+
+
+<?php
+if($tag=='logout')
+{
+	session_destroy();
+	header('Location: index.php');
+}
+?>
+
+
 <div class="container-fluid">
   <div class="row">
 <div id="demo">

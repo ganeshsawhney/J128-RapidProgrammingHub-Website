@@ -74,9 +74,11 @@ $("#demo").animate({
       <ul class="nav navbar-nav navbar-right">
         <li><a onclick="loadDoc('pages/home.php');" href="#HOME">HOME</a></li>
         <li ><a onclick="loadDoc('pages/notice.php');" href="#NOTICES">NOTICES</a></li>
-        <li><a onclick="loadDoc('pages/notice.php');" href="#SCHEDULE">SCHEDULE</a></li>
         <li><a onclick="loadDoc('pages/contact.php');" href="#CONTACT">CONTACT</a></li>
-        <li><a onclick="loadDoc('pages/addnotice.php');" href="#CONTACT">ADDNOTICE</a></li>
+        <li><a onclick="loadDoc('pages/addnotice.php');" href="#ADDNOTICE">ADDNOTICE</a></li>
+		<?php if($_SESSION["type"]=="Faculty"){?>
+        <li><a onclick="loadDoc('pages/addcoordinators.php');" href="#Coordinators">ADD CO.</a></li>
+		<?php }?>
         <li><a onclick="logout();"href="?tag=logout">SIGNOUT</a></li>
       </ul>
     </div>
@@ -103,7 +105,7 @@ if($tag=='logout')
   <p>Get Notified via Mail</p> 
   <form class="form-inline">
     <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-    <button type="submit" class="btn btn-danger">Subscribe</button>
+    <button type="submit" onClick="alert('This Feature will be active within few days\nApologies for the inconvenience')" class="btn btn-danger">Subscribe</button>
   </form>
 </div>
 

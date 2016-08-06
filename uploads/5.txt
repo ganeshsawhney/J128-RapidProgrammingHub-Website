@@ -1,0 +1,6 @@
+Type:	Lecture
+By:	Ganesh Sawhney
+Subject:	Lecture
+Date Of Event:	2016-02-12
+
+Notice: Lecture on Euclid

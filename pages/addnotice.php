@@ -14,15 +14,15 @@ if(!isset($_SESSION["logincheck"]))
   <h2>Add a Notice</h2>
     <div class="form-group">
       <label for="text">Subject:</label>
-      <input type="text" class="form-control" name="subject" placeholder="Enter Subject">
+      <input type="text" class="form-control" name="subject" placeholder="Enter Subject" required>
     </div>
     <div class="form-group">
       <label for="text">Type:</label>
-      <input type="text" class="form-control" name="type" placeholder="Enter Type ex: Lecture/Contest/Notification">
+      <input type="text" class="form-control" name="type" placeholder="Enter Type ex: Lecture/Contest/Notification" required>
     </div>
 	<div class="form-group">
       <label for="text">Date Of Event:</label>
-      <input type="date" class="form-control" name="date" placeholder="Enter Date of Event if Required">
+      <input type="date" class="form-control" name="date" placeholder="Enter Date of Event if Required" >
     </div>
 	
     <div class="form-group">
@@ -36,7 +36,7 @@ if(!isset($_SESSION["logincheck"]))
     <input type="file" name="fileToUpload" id="fileToUpload">
 	</div>
 	
-    <input type="submit" class="btn btn-primary" value="Upload Image" name="submit">
+    <input type="submit" class="btn btn-primary" value="Add Notice and Upload Zip/Rar(if selected)" name="submit">
 
 </div>   
 </form>

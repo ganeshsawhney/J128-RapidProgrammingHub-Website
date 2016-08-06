@@ -2,7 +2,7 @@
   <p>Get Notified via Mail</p> 
   <form class="form-inline">
     <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-    <button type="submit" class="btn btn-danger">Subscribe</button>
+    <button type="submit" onClick="alert('This Feature will be active within few days\nApologies for the inconvenience')" class="btn btn-danger">Subscribe</button>
   </form>
 </div>
 

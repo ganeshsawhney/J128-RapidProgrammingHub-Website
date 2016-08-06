@@ -35,6 +35,7 @@ if(isset($_POST['action']))
 			$_SESSION["logincheck"]="valid";
 			$_SESSION["email"]=$Results['email'];
 			$_SESSION["name"]=$Results['name'];
+			$_SESSION["type"]=$Results['type'];
 			$_SESSION["enroll"]=$Results['enroll'];
             $message = "Hey ".$Results['name']."!!<br> You are Logged in!!";
 			?><script>

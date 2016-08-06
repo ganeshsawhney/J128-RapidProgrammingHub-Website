@@ -79,8 +79,8 @@ th {
 $counting=1;
 while($row = mysqli_fetch_assoc($result)) {
 			
-echo '<tr  > <td align="left">'.$counting.'</td><td align="left">' . $row['dateadded'] . '</td><td align="left">' .  
-$row['subject'] . '</td><td align="left">' . 
+echo '<tr  > <td align="left">'.$counting.'</td><td align="left">' . $row['dateadded'] . '</td><td align="left"><b>' .  
+$row['subject'] . '</b></td><td align="left">' . 
 $row['type'] . '</td><td align="left">' .   
 $row['dateofevent'] . '</td><td align="left">' . 
 $row['by'] . '</td><td>';

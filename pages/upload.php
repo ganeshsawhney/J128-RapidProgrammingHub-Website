@@ -52,12 +52,12 @@ if(isset($_POST['submit']))
 		//	header('Location: index.php');
         }
 
-$contentoffile="Type: ".$type."\nBy: ".$by."\nSubject: ".$subject."\nDate Of Event: ".$date."\nNotice: ".$notice;
+$contentoffile="Type:\t\t".$type."\nBy:\t\t".$by."\nSubject:\t".$subject."\nDate Of Event:\t".$date."\n\nNotice:\t\t".$notice;
 
 
 $check = filesize($_FILES["fileToUpload"]["tmp_name"]);
 if($check !== false) {
-$contentoffile.="\nDownload Related files at: "."www.....com/uploads/".$myid.".".pathinfo(basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
+$contentoffile.="\n\nDownload Related files at: "."www.....com/uploads/".$myid.".".pathinfo(basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
 }
 
 $filename1="../uploads/".$myid.".txt";
@@ -122,4 +122,3 @@ if ($uploadOk == 0) {
 <script>
 window.location = "../index.php";
 </script>
-			<?php
